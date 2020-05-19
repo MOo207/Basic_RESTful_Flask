@@ -8,9 +8,7 @@ autopep8 = "*"
 
 [packages]
 flask = "*"
-flask-sqlalchemy = "*"
-flask-marshmallo = "*"
-marshmallow-sqlalchemy = "*"
+flask-mysql = "*"
 
 [requires]
 python_version = "3.8"
