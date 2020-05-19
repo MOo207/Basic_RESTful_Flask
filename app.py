@@ -77,17 +77,17 @@ def get_task(task_id):
 #     task[0]['done'] = request.json.get('done', task[0]['done'])
 #     return jsonify({'task': task[0]})
 
-# DELETE One Entry From MyTasks List
-@app.route('/api/tasks/<int:task_id>', methods=['DELETE'])
-def delete_task(task_id):
-    connection = mysql.connect()
-    cursor = connection.cursor()
-    query = str("DELETE FROM users WHERE id="+str(task_id))
-    cursor.execute(query)
-    dbData = cursor.fetchall()
-    cursor.close()
-    connection.close()
-    return jsonify({'result': dbData})
+# # DELETE One Entry From MyTasks List
+# @app.route('/api/tasks/<int:task_id>', methods=['DELETE'])
+# def delete_task(task_id):
+#     connection = mysql.connect()
+#     cursor = connection.cursor()
+#     query = str("DELETE FROM users WHERE id="+str(task_id))
+#     cursor.execute(query)
+#     dbData = cursor.fetchall()
+#     cursor.close()
+#     connection.close()
+#     return jsonify({'result': dbData})
 
 if __name__ == '__main__':
     app.run(debug=True)
